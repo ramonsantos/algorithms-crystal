@@ -1,0 +1,13 @@
+name: algorithms-crystal
+version: 0.1.0
+
+authors:
+  - ramonsantos <ramonsantos.pe@gmail.com>
+
+targets:
+  algorithms-crystal:
+    main: src/algorithms-crystal.cr
+
+crystal: 0.30.1
+
+license: MIT
