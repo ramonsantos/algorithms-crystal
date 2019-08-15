@@ -9,12 +9,9 @@ module Algorithms
 
       loop do
         if i > 0
-          i -= 1
-          temp = array[i]
+          temp = array[i -= 1]
         else
-          num -= 1
-
-          return array if num == 0
+          return array if (num -= 1) == 0
 
           temp = array[num]
           array[num] = array[0]
@@ -26,13 +23,11 @@ module Algorithms
         while child < num
           child += 1 if (child + 1 < num) && (array[child + 1] > array[child])
 
-          if array[child] > temp
-            array[parent] = array[child]
-            parent = child
-            child = parent * 2 + 1
-          else
-            break
-          end
+          break unless array[child] > temp
+
+          array[parent] = array[child]
+          parent = child
+          child = parent * 2 + 1
         end
 
         array[parent] = temp
