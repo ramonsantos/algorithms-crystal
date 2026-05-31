@@ -2,14 +2,15 @@ module Algorithms
   class HeapSort
     def sort(array)
       num = array.size
-      i = num / 2
+      i = num // 2
       parent = 0
       child = 0
       temp = 0
 
       loop do
         if i > 0
-          temp = array[i -= 1]
+          i -= 1
+          temp = array[i]
         else
           return array if (num -= 1) == 0
 
